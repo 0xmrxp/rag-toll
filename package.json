@@ -1,0 +1,34 @@
+{
+  "name": "rag-toll",
+  "version": "1.0.0",
+  "description": "RAG-Toll: Monetize your private data via x402 protocol",
+  "main": "bin/rag-toll.js",
+  "bin": {
+    "rag-toll": "./bin/rag-toll.js"
+  },
+  "scripts": {
+    "start": "node bin/rag-toll.js serve ./test-data --port 8080",
+    "dev": "node bin/rag-toll.js serve ./test-data --port 8080",
+    "docker:build": "docker build -t rag-toll .",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "test": "node bin/rag-toll.js serve ./test-data --port 8080"
+  },
+  "keywords": ["rag", "x402", "monetization", "vector-search", "ai", "base", "usdc"],
+  "author": "RAG-Toll",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/swagger": "*",
+    "@fastify/swagger-ui": "*",
+    "@xenova/transformers": "*",
+    "axios": "*",
+    "commander": "*",
+    "csv-parse": "*",
+    "dotenv": "*",
+    "fastify": "*",
+    "openai": "*",
+    "pino": "*",
+    "pino-pretty": "*"
+  }
+}

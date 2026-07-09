@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+
+# Vector store data
+custom-vector-store.json
+vectra-index/
+test-vectra-index/
+
+# Test artifacts
+test-vectra.js
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*

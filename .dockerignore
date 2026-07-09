@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.env
+vectra-index
+custom-vector-store.json
+test-vectra-index
+.git
+.gitignore
+README.md

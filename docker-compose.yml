@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  rag-toll:
+    build: .
+    container_name: rag-toll-api
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      # Mount data folder (change this to your actual data)
+      - ./test-data:/app/data:ro
+      # Persist vector store
+      - rag-toll-vectors:/app/vector-store
+      # Mount .env for API keys
+      - ./.env:/app/.env:ro
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 120s  # Give time for model download on first run
+      retries: 3
+    command: ["serve", "./data", "--port", "8080"]
+
+volumes:
+  rag-toll-vectors:
+    driver: local
