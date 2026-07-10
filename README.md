@@ -11,7 +11,7 @@
 
 > Turn any local dataset into a monetized, globally discoverable API for AI Agents. Zero backend required.
 
-**Hackathon Tracks:** AI Applications | Agentic Commerce Infrastructure | Open Innovation
+**Tracks:** AI Applications | Agentic Commerce Infrastructure | Open Innovation
 **Protocol:** x402 v2 | Multi-Chain | Multi-Facilitator | Bazaar & x402scan Ready
 
 ---
